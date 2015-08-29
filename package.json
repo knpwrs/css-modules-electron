@@ -33,5 +33,13 @@
     "gulp-cached": "^1.1.0",
     "gulp-run-electron": "^1.2.1",
     "in-publish": "^2.0.0"
+  },
+  "dependencies": {
+    "css-modules-require-hook": "^1.0.4",
+    "lodash.get": "^3.7.0",
+    "postcss": "^4.1.16",
+    "postcss-modules-extract-imports": "0.0.5",
+    "postcss-modules-local-by-default": "0.0.12",
+    "postcss-modules-scope": "0.0.8"
   }
 }
