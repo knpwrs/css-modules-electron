@@ -1,0 +1,37 @@
+{
+  "name": "css-modules-electron",
+  "version": "0.0.0",
+  "description": "A require hook to compile and use CSS modules in Electron.",
+  "main": "lib/index.js",
+  "scripts": {
+    "build": "gulp build:lib",
+    "start": "gulp",
+    "prepublish": "in-publish && npm run build || in-install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kenpowers/css-modules-electron.git"
+  },
+  "keywords": [
+    "css-modules",
+    "require",
+    "hook",
+    "electron"
+  ],
+  "author": "Kenneth Powers <ken@kenpowers.net> (http://knpw.rs)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kenpowers/css-modules-electron/issues"
+  },
+  "homepage": "https://github.com/kenpowers/css-modules-electron#readme",
+  "devDependencies": {
+    "auto-plug": "^1.1.0",
+    "babel-core": "^5.8.23",
+    "del": "^1.2.1",
+    "gulp": "^3.9.0",
+    "gulp-babel": "^5.2.1",
+    "gulp-cached": "^1.1.0",
+    "gulp-run-electron": "^1.2.1",
+    "in-publish": "^2.0.0"
+  }
+}
