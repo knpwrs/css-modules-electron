@@ -7,7 +7,7 @@ const GP = ap('gulp');
 gulp.task('build', ['build:lib', 'build:example']);
 
 gulp.task('build:lib', function () {
-  return gulp.src('src/*.js')
+  return gulp.src('src/**/*.js')
     .pipe(GP.cached('js'))
     .pipe(GP.babel())
     .pipe(gulp.dest('lib'));
@@ -16,14 +16,14 @@ gulp.task('build:lib', function () {
 gulp.task('build:example', ['build:example:js', 'build:example:static']);
 
 gulp.task('build:example:js', function () {
-  return gulp.src('example/src/*.js')
+  return gulp.src('example/src/**/*.js')
     .pipe(GP.cached('js'))
     .pipe(GP.babel())
     .pipe(gulp.dest('example/lib'));
 });
 
 gulp.task('build:example:static', function () {
-  return gulp.src('example/src/*.{css,html}')
+  return gulp.src('example/src/**/*.{css,html,svg}')
     .pipe(GP.cached('html'))
     .pipe(gulp.dest('example/lib'));
 });
@@ -37,7 +37,7 @@ gulp.task('run', ['build'], function () {
 });
 
 gulp.task('default', ['run'], function () {
-  gulp.watch('{src, example/src}/**/*.*', ['build', GP.runElectron.rerun]).on('change', function (event) {
+  gulp.watch('{src,example}/**/*.*', ['build', GP.runElectron.rerun]).on('change', function (event) {
     if (event.type === 'deleted') {
       delete GP.cached.caches[event.path.split('.').pop()][event.path];
     }
