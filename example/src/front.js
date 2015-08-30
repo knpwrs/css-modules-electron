@@ -1,4 +1,4 @@
-import hook  from '../../';
+import hook  from '../../register';
 import React from 'react';
 import App   from './components/App';
 
