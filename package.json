@@ -36,7 +36,7 @@
     "react": "^0.13.3"
   },
   "dependencies": {
-    "css-modules-require-hook": "^1.0.4",
+    "css-modules-require-hook": "^1.0.10",
     "lodash.merge": "^3.3.2",
     "postcss": "^4.1.16",
     "postcss-modules-extract-imports": "0.0.5",

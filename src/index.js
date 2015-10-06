@@ -10,25 +10,19 @@ var root = remote.require('app').getAppPath();
  * @param {Array?} pre  PostCss plugins to run before the default set of plugins.
  * @param {Array?} post PostCss plugins to run after the default set of plugins.
  */
-export default function(pre = [], post = []) {
+export default function(pre = [], post = [], args = {}) {
   hook(merge({
-    root: root,
-    use: [
-      // Pre-plugins
-      ...pre,
-      // Core css-modules plugins
-      require('postcss-modules-extract-imports'),
-      require('postcss-modules-local-by-default'),
-      require('postcss-modules-scope'),
+    prepend: pre,
+    append: [
+      ...post,
       // Rewrite css urls
       require('postcss-url')({
         url: function (url, decl, from, dirname, to, options, result) {
           return path.join(root, dirname, url);
         }
-      }),
-      // Post-plugins
-      ...post
+      })
     ],
+    root: root,
     processCss: function (css) {
       if (!document || !document.head) {
         return;
