@@ -33,15 +33,15 @@
     "gulp-cached": "^1.1.0",
     "gulp-run-electron": "^1.2.1",
     "in-publish": "^2.0.0",
+    "postcss": "^4.1.16",
+    "postcss-modules-extract-imports": "0.0.5",
+    "postcss-modules-local-by-default": "0.0.12",
+    "postcss-modules-scope": "0.0.8",
     "react": "^0.13.3"
   },
   "dependencies": {
     "css-modules-require-hook": "^1.0.10",
     "lodash.merge": "^3.3.2",
-    "postcss": "^4.1.16",
-    "postcss-modules-extract-imports": "0.0.5",
-    "postcss-modules-local-by-default": "0.0.12",
-    "postcss-modules-scope": "0.0.8",
     "postcss-url": "^4.0.1"
   }
 }
