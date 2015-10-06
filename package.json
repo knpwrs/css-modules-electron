@@ -41,7 +41,6 @@
   },
   "dependencies": {
     "css-modules-require-hook": "^1.0.10",
-    "lodash.merge": "^3.3.2",
     "postcss-url": "^4.0.1"
   }
 }
