@@ -1,8 +1,8 @@
 import hook   from 'css-modules-require-hook';
-import remote from 'remote';
+import {remote} from 'electron';
 import path   from 'path';
 
-var root = remote.require('app').getAppPath();
+var root = remote.app.getAppPath();
 
 /**
  * Calls css-modules-require-hook with some extra options.
