@@ -1,6 +1,6 @@
 {
   "name": "css-modules-electron",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "A require hook to compile and use CSS modules in Electron.",
   "main": "lib/index.js",
   "scripts": {
