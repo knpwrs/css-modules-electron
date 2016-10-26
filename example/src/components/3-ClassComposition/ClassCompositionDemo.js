@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 
 import ClassComposition from './ClassComposition';
-import Snippet          from '../shared/Snippet/Snippet';
-import readFile         from '../shared/readFile';
+import Snippet from '../shared/Snippet/Snippet';
+import readFile from '../shared/readFile';
 
-const js            = readFile(__dirname, 'StyleVariantA/StyleVariantA.js');
-const css           = readFile(__dirname, 'StyleVariantA/StyleVariantA.css');
-const layoutCss     = readFile(__dirname, '../shared/styles/layout.css');
+const js = readFile(__dirname, 'StyleVariantA/StyleVariantA.js');
+const css = readFile(__dirname, 'StyleVariantA/StyleVariantA.css');
+const layoutCss = readFile(__dirname, '../shared/styles/layout.css');
 const typographyCss = readFile(__dirname, '../shared/styles/typography.css');
 
 export default class ClassCompositionDemo extends Component {

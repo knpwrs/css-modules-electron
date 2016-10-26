@@ -1,5 +1,5 @@
-import {app, BrowserWindow} from 'electron';
-import {join}               from 'path';
+import { app, BrowserWindow } from 'electron';
+import { join } from 'path';
 
 var mainWindow = null;
 

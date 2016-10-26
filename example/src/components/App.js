@@ -2,12 +2,12 @@ import styles from './App.css';
 
 import React, { Component } from 'react';
 
-import Logo                     from './0-Logo/Logo';
-import ScopedSelectorsDemo      from './1-ScopedSelectors/ScopedSelectorsDemo';
-import GlobalSelectorsDemo      from './2-GlobalSelectors/GlobalSelectorsDemo';
-import ClassCompositionDemo     from './3-ClassComposition/ClassCompositionDemo';
+import Logo from './0-Logo/Logo';
+import ScopedSelectorsDemo from './1-ScopedSelectors/ScopedSelectorsDemo';
+import GlobalSelectorsDemo from './2-GlobalSelectors/GlobalSelectorsDemo';
+import ClassCompositionDemo from './3-ClassComposition/ClassCompositionDemo';
 import CompositionOverridesDemo from './4-CompositionOverrides/CompositionOverridesDemo';
-import ScopedAnimationsDemo     from './5-ScopedAnimations/ScopedAnimationsDemo';
+import ScopedAnimationsDemo from './5-ScopedAnimations/ScopedAnimationsDemo';
 
 export default class App extends Component {
 
