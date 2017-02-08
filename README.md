@@ -1,5 +1,7 @@
 # css-modules-electron
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/knpwrs/css-modules-electron.svg)](https://greenkeeper.io/)
+
 Load [CSS Modules] in [Electron]. Once registered, you can `require` CSS modules
 and they will automatically be compiled and injected into the `head` element of
 your [Electron] app.
