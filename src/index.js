@@ -2,7 +2,8 @@ import hook from 'css-modules-require-hook';
 import { remote } from 'electron';
 import path from 'path';
 
-var root = remote.app.getAppPath();
+const { app } = remote;
+const rootDir = app.getAppPath();
 
 /**
  * Calls css-modules-require-hook with some extra options.
@@ -12,13 +13,13 @@ var root = remote.app.getAppPath();
 export default function(args = {}) {
   hook({
     ...args,
-    root: root,
+    rootDir,
     append: [
       ...(args.append || []),
       // Rewrite css urls
       require('postcss-url')({
-        url: function (url, decl, from, dirname, to, options, result) {
-          return path.join(root, dirname, url);
+        url: function (asset, dir, options, decl, warn, result) {
+          return asset.absolutePath;
         }
       })
     ],
@@ -29,7 +30,7 @@ export default function(args = {}) {
       if (!document || !document.head) {
         return css;
       }
-      var style = document.createElement('style');
+      const style = document.createElement('style');
       style.type = 'text/css';
       style.innerHTML = css;
       document.head.appendChild(style);
